@@ -1,13 +1,26 @@
-import donut from "../assets/donut.png";
-import icecream from "../assets/icecream2.png";
-import apples from "../assets/apples2.png";
-import ham from "../assets/ham2.png";
+import yellowCard from "../assets/yellowcard.jpg";
+import icecream2 from "../assets/icecream2.png";
+import apples2 from "../assets/apples2.png";
+import ham2 from "../assets/ham2.png";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const BestSellerRightSection = () => {
+const BestSellerSection = () => {
   return (
     <section className="w-full max-w-[1440px] mx-auto bg-white py-[60px] flex gap-[30px] px-[80px]">
-      {/* Sol Ürün Alanı */}
+      {/* Sol Sarı Görsel */}
+      <div className="relative w-[370px] h-[720px] rounded-md overflow-hidden">
+        <img
+          src={yellowCard}
+          alt="Yellow Card"
+          className="w-full h-full object-cover rounded-md"
+        />
+        <div className="absolute top-[40px] left-[40px] text-gray-800">
+          <h5 className="text-[14px] font-semibold tracking-[1px]">FURNITURE</h5>
+          <p className="text-[14px] text-gray-600 mt-1">5 Items</p>
+        </div>
+      </div>
+
+      {/* Sağ Ürün Alanı */}
       <div className="flex-1 flex flex-col">
         {/* Üst Başlık + Kategoriler */}
         <div className="flex items-center justify-between mb-[30px]">
@@ -39,12 +52,10 @@ const BestSellerRightSection = () => {
 
         {/* Ürün Grid */}
         <div className="grid grid-cols-3 gap-y-[40px] gap-x-[20px]">
-          {[icecream, apples, ham, icecream, apples, ham].map((img, i) => (
+          {[icecream2, apples2, ham2, icecream2, apples2, ham2].map((img, i) => (
             <div
               key={i}
-              className={`flex flex-col items-center text-center gap-2 ${
-                i === 2 ? "border border-blue-400 p-2 rounded-md" : ""
-              }`}
+              className="flex flex-col items-center text-center gap-2"
             >
               <img
                 src={img}
@@ -63,21 +74,8 @@ const BestSellerRightSection = () => {
           ))}
         </div>
       </div>
-
-      {/* Sağ Mavi Görsel */}
-      <div className="relative w-[370px] h-[720px] rounded-md overflow-hidden">
-        <img
-          src={donut}
-          alt="Donut"
-          className="w-full h-full object-cover rounded-md"
-        />
-        <div className="absolute top-[40px] left-[40px] text-gray-800">
-          <h5 className="text-[14px] font-semibold tracking-[1px]">FURNITURE</h5>
-          <p className="text-[14px] text-gray-600 mt-1">5 Items</p>
-        </div>
-      </div>
     </section>
   );
 };
 
-export default BestSellerRightSection;
+export default BestSellerSection;

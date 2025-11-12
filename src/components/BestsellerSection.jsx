@@ -4,7 +4,7 @@ import apples2 from "../assets/apples2.png";
 import ham2 from "../assets/ham2.png";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const BestsellerSection = () => {
+const BestSellerSection = () => {
   return (
     <section className="w-full max-w-[1440px] mx-auto bg-white py-[60px] flex gap-[30px] px-[80px]">
       {/* Sol Sarı Görsel */}
@@ -78,4 +78,4 @@ const BestsellerSection = () => {
   );
 };
 
-export default BestsellerSection;
+export default BestSellerSection;
